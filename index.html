@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  
+     $("#submit").click(function(){
+           
+      var v = $('#num').val();
+      var n = $('#count').val();
+       var j ='';
+      for(var i=1;i<=n;i++)
+{
+    if(i<=9)
+    {
+
+  j+='<a href="http://dm.damcdn.net/video6/'+v+'/0'+i+'.mp4" class="btn btn-sm" target="_blank">Video-'+i+'</a><video class="embed-responsive embed-responsive-16by9" controls><source src="http://dm.damcdn.net/video6/'+v+'/0'+i+'.mp4" type="video/mp4"></video>';
+
+
+    }
+    else
+    {
+     
+    j+='<a href="http://dm.damcdn.net/video6/'+v+'/'+i+'.mp4" class="btn btn-sm" target="_blank">Video-'+i+'</a><video class="embed-responsive embed-responsive-16by9" controls><source src="http://dm.damcdn.net/video6/'+v+'/'+i+'.mp4" type="video/mp4"></video>';
+  
+      
+    }
+} 
+       
+   $('#div').html(j);  
+       
+       
+       
+});
+  
+});
+  </script>
+</head>
+<body>
+<div class="container">
+    <div class="row col-md-12">
+        <div class="col-md-3"> </div> 
+        <div class="col-md-6">
+    <div class="form-group">
+        <label for="filmnum">Number:</label>
+        <input type="text" name="filmnum" class="form-control" placeholder="like:- 412" id="num">
+    </div>
+    <div class="form-group">
+        <label for="count">Count:</label>
+        <select name="count" id="count" class="form-control">
+            <option>-- Select Option --</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+    </div>
+  <p><button type="submit" name="submit" id="submit" class="btn btn-success">Go ==></button></p>
+        </div>
+<div class="col-md-3"> </div>
+</div>
+    <div class="row col-md-12">
+        <div class="col-md-3"> </div>
+        <div id="div" class="col-md-6">F*ck</div>
+        <div class="col-md-3"> </div>
+    </div>
+    </div>
+</body>
+</html>
